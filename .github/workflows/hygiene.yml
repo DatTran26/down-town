@@ -1,0 +1,22 @@
+name: hygiene
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: required files
+        run: |
+          set -euo pipefail
+          test -f README.md
+          test -f .gitignore
+          test -f AGENTS.md
+          if [ -d .github/ISSUE_TEMPLATE ]; then
+            test -f .github/pull_request_template.md
+          fi
