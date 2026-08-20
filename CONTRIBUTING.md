@@ -6,5 +6,5 @@
 - Do not push or PR personal branches into `main`.
 - Cut `release/x.y.z` from `develop` when shipping. Hotfix from `main`.
 - Do not commit `.env` or secrets.
-- Commit messages: Conventional Commits (`ak:git` if present; else caveman-commit short subject).
+- Commit messages: English Conventional Commits. Prefer `ak:git` if present; else `.claude/skills/principled-git-commit` + `.claude/skills/caveman-commit` (subject ≤50, no emoji, no AI trailer).
 - Releases: update `CHANGELOG.md` + `docs/releases/x.y.z.md`, merge `release/x.y.z` to `main`, then GitHub Release (`create-release.ps1` or `ak:ship official` + `gh release`).
