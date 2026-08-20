@@ -12,8 +12,8 @@
 - PR target: develop (personal). Never personal → main.
 - release/x.y.z → main. hotfix/* from main.
 - Git ops:
-  - Prefer ak:git cp / ak:git pr develop / ak:ship beta if present
-  - Else: principled-git-commit + caveman-commit + wpc git-fallback
+  - Prefer ak:git cm / ak:git cp / ak:git pr develop / ak:ship beta if present
+  - Else: repo skills `.claude/skills/principled-git-commit` then `.claude/skills/caveman-commit` (English), then wpc git-fallback
 - License: mit
 - Security file: SECURITY.md on
 - Environments: staging, production (no deploy secrets in v1)
@@ -33,6 +33,6 @@ Never PR a personal branch to `main`. Feature work starts from `develop` as `fea
 
 1. Identity: `ensure-git-identity.ps1` (noreply `id+login@users.noreply.github.com`). Do not set global git user.
 2. If this runtime has `ak:git`: `ak:git cm` / `ak:git cp` / `ak:git pr develop`. Secret scan + split + message + push live in ak:git. Do not also load principled or caveman.
-3. If `ak:git` is missing: principled-git-commit (atomic, block secrets) → caveman-commit (≤50, no emoji, no AI trailer) → wpc git-fallback.
+3. If `ak:git` is missing: load `.claude/skills/principled-git-commit` (atomic, block secrets) then `.claude/skills/caveman-commit` (English subject ≤50, no emoji, no AI trailer). Commit messages stay English.
 4. Personal/feature → `develop` only. `release/x.y.z` → `main`. Hotfix from `main`.
 5. Do not force-push `main` or `develop`.
