@@ -4,11 +4,11 @@
 - Visibility: public
 - Default branch: main
 - Integration branch: develop
-- Member branches:
-  - Dat → `develop/dat`
-  - Hieu → `develop/hieu`
-  - Kien → `develop/kien`
-  - Thanh → `develop/thanh`
+- Member branches (hyphen form; Git cannot store `develop/<name>` next to branch `develop`):
+  - Dat → `develop-dat`
+  - Hieu → `develop-hieu`
+  - Kien → `develop-kien`
+  - Thanh → `develop-thanh`
 - PR target: develop (personal). Never personal → main.
 - release/x.y.z → main. hotfix/* from main.
 - Git ops:
@@ -23,7 +23,7 @@
 ## Branch map
 
 ```text
-develop/dat | develop/hieu | develop/kien | develop/thanh
+develop-dat | develop-hieu | develop-kien | develop-thanh
     →  PR  →  develop  →  release/x.y.z  →  main
 ```
 

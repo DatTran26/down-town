@@ -2,7 +2,7 @@
 
 - Default branch: `main` (production).
 - Integration branch: `develop` (GitFlow).
-- Work on `develop/<name>` or `developN`, then open a PR into `develop`.
+- Work on `develop-<name>` (or `developN`), then open a PR into `develop`.
 - Do not push or PR personal branches into `main`.
 - Cut `release/x.y.z` from `develop` when shipping. Hotfix from `main`.
 - Do not commit `.env` or secrets.

@@ -7,16 +7,18 @@ Public GitFlow repo for the Down_Town project. Default branch is `main`. Integra
 ```powershell
 git clone https://github.com/DatTran26/down-town.git
 cd down-town
-git checkout develop/<your-name>
+git checkout develop-<your-name>
 git pull
 ```
 
-Member branches: `develop/dat`, `develop/hieu`, `develop/kien`, `develop/thanh`.
+Member branches: `develop-dat`, `develop-hieu`, `develop-kien`, `develop-thanh`.
+
+Git cannot store `develop/<name>` while the integration branch `develop` exists, so personal branches use a hyphen.
 
 ## Branch map
 
 ```text
-develop/<name>  →  PR  →  develop  →  release/x.y.z  →  main
+develop-<name>  →  PR  →  develop  →  release/x.y.z  →  main
 ```
 
 - Work on your personal branch. Open PRs into `develop`.
