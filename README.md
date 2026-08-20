@@ -25,4 +25,4 @@ develop-<name>  →  PR  →  develop  →  release/x.y.z  →  main
 - Never PR a personal branch into `main`.
 - Cut `release/x.y.z` from `develop` when shipping. Hotfix from `main`.
 
-See [AGENTS.md](AGENTS.md) for agent git-ops, [CONTRIBUTING.md](CONTRIBUTING.md) for humans, and [docs/README.md](docs/README.md) for docs.
+See [AGENTS.md](AGENTS.md) for agent git-ops, [CONTRIBUTING.md](CONTRIBUTING.md) for humans, and [docs/README.md](docs/README.md) for docs. English commit fallback skills live in [`.claude/skills`](.claude/skills/README.md); skip them when `ak:git` is present.
